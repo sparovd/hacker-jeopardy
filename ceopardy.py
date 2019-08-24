@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Ceopardy
 # https://github.com/obilodeau/ceopardy/
 #
