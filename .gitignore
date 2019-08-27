@@ -2,6 +2,9 @@
 ceopardy*db
 ceopardy.log
 
+# TOP SECRET questions!
+data/
+
 # sound files (not provided)
 /static/sounds/reveal.mp3
 /static/sounds/thinking-music.wav
@@ -9,9 +12,6 @@ ceopardy.log
 
 # dependencies managed by Bower
 /static/vendor/
-
-# TOP SECRET questions!
-data/
 
 # Created by https://www.gitignore.io/api/vim,bower,python,pycharm+all
 # Edit at https://www.gitignore.io/?templates=vim,bower,python,pycharm+all
