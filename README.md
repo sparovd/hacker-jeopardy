@@ -32,7 +32,11 @@ reloading to start a new game.
 
 ## под виндой
 1. ставим питон 3.8 из магазина приложений
-2. ставим virtualenv pip install virtualenv
-3. Разрешаем политику исполнения скриптов 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser'
-4. дальше активируем окружение '.\env\bin\activate'
-5. ставим требуемые пакеты 'pip install -r requirements.txt'
+2. ставим vscode
+3. ставим git для windows
+4. Разрешаем политику исполнения скриптов `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser`
+5. ставим virtualenv `pip install virtualenv`  из консоли vscode
+6. создаем окружение `virtualenv env` (может не работать, добавьте в Path, или вызывай по асболютному пути)
+7. дальше активируем окружение `.\env\bin\activate`  (vscode может приедложить применить сразу во всплывающем окне)
+8. ставим требуемые пакеты `pip install -r requirements.txt`
+9. запускаем python.exe .\ceopardy.py
