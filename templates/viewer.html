@@ -27,7 +27,7 @@
                 {% set answered = questions['c{}q{}'.format(_c, _r)] == True %}
                 <div class="col-ceopardy flex-horizontal-pad">
                     <div id="c{{ _c }}q{{ _r }}" class="box-ceopardy box-question-viewer" role="button">
-                        <p class="{{ 'answered' if answered }}">${{ _r * SCORE_TICK }}</p>
+                        <p class="{{ 'answered' if answered }}">{{ _r * SCORE_TICK }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -46,7 +46,7 @@
                 <div id="{{ tid }}" class="black-box flex-pad {{ 'team-selected' if select_tid == tid }}" style="width: 80%; max-width:250px; margin: auto;">
                     <div class="col-player flex-horizontal-pad">
                         <div class="row-player flex-vertical-pad" style="height: 30%;">
-                            <div id="{{ tid }}-score" class="box-ceopardy box-score"><p>${{ score }}</p></div>
+                            <div id="{{ tid }}-score" class="box-ceopardy box-score"><p>{{ score }}</p></div>
                         </div>
                         <div class="row-player flex-vertical-pad" style="height: 70%;">
                             <div id="{{ tid }}-name" class="box-ceopardy box-team {{ tid }}-font"><p>{{ name }}</p></div>

@@ -103,7 +103,7 @@
                                 {% endfor %}
                             </div>
                             <div class="box-question-right">
-                                <p>${{ _r * SCORE_TICK }}</p>
+                                <p>{{ _r * SCORE_TICK }}</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                                 </div>
                             </div>
                             <div class="box-team-side">
-                                <div id="{{ tid }}-score" class="box-ceopardy-colorless box-score"><p>${{ scores.get(name, 0) }}</p></div>
+                                <div id="{{ tid }}-score" class="box-ceopardy-colorless box-score"><p>{{ scores.get(name, 0) }}</p></div>
                             </div>
                         </div>
                     </div> 

@@ -28,3 +28,11 @@ database where transactions are pushed when the hosts submit the points. This
 has the flipside requiring games to be finalized before a new one can be
 started. Make sure that you always push the "Game over" button before
 reloading to start a new game.
+
+
+## под виндой
+1. ставим питон 3.8 из магазина приложений
+2. ставим virtualenv pip install virtualenv
+3. Разрешаем политику исполнения скриптов 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser'
+4. дальше активируем окружение '.\env\bin\activate'
+5. ставим требуемые пакеты 'pip install -r requirements.txt'
