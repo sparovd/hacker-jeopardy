@@ -30,13 +30,21 @@ started. Make sure that you always push the "Game over" button before
 reloading to start a new game.
 
 
-## под виндой
+## под виндой (тестил на 11)
 1. ставим питон 3.8 из магазина приложений
 2. ставим vscode
 3. ставим git для windows
-4. Разрешаем политику исполнения скриптов `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser`
-5. ставим virtualenv `pip install virtualenv`  из консоли vscode
-6. создаем окружение `virtualenv env` (может не работать, добавьте в Path, или вызывай по асболютному пути)
-7. дальше активируем окружение `.\env\bin\activate`  (vscode может приедложить применить сразу во всплывающем окне)
-8. ставим требуемые пакеты `pip install -r requirements.txt`
-9. запускаем python.exe .\ceopardy.py
+4. дальше в vscode открываем проект и заходим в терминал terminal->new_terminal. Дальше пишем в нем
+5. Разрешаем политику исполнения скриптов `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser`
+6. ставим virtualenv `pip install virtualenv`  из консоли vscode
+7. создаем окружение `virtualenv env` (может не работать, добавьте в Path, или вызывайте по асболютному пути нахождкения - гдето в python\...\Scripts\virtualenv)
+8. дальше активируем окружение `.\env\bin\activate`  (vscode может приедложить применить сразу во всплывающем окне)
+9. ставим требуемые пакеты `pip install -r requirements.txt`
+10. запускаем `python.exe .\ceopardy.py`
+11. идем в бразуер по адресу `http://localhost:5000/host` - это страница ведущего
+12. В бразуере по адресу `http://localhost:5000` - монитор для игроков
+(Подразумевается так, что одно окно браузера с монитором выводим на проектор, а второе окно со страницей ведущего на ноуте)
+
+## перезапуск
+1. удаляем лог и базу:  `rm .\ceopardy.log .\ceopardy.db`
+2. перезапускаем `python.exe .\ceopardy.py`
