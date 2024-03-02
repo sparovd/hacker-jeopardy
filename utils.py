@@ -34,10 +34,11 @@ def parse_questions(filename):
     questions = {}
     cur_category = None
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r',-1,"utf-8") as f:
             for line in f:
                 line = line.rstrip("\r\n")
-
+                #print("Q:")
+                #print(line)
                 # skip comments or whitespace lines
                 if re.match(r'^\s*(#|$)', line):
                     continue
@@ -73,16 +74,19 @@ def parse_gamefile(filename):
     categories = list()
     final = None
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r',-1,"utf-8") as f:
             for line in f:
                 line = line.rstrip("\r\n")
 
                 # match: final: [category] text
                 m = re.match(r'final: \[([^]]+)\] (.*)$', line)
                 if m:
+                    #print("FINAL:")
+                    #print(line)
                     final = {'category': m.group(1), 'question': m.group(2)}
                     continue
-
+                #print("PARSE:")
+                #print(line)
                 categories.append(line)
 
     except Exception as e:
@@ -95,6 +99,8 @@ def parse_gamefile(filename):
 def question_to_html(question_text):
     """Parses the questions from the Beopardy Game Board format"""
     question_text = html.escape(question_text)
+    #print("QUESTION IS:")
+    #print(question_text)
 
     # Warning, we don't support nested line heading options
     # UTF-8 is just killed since everything is UTF-8 now
