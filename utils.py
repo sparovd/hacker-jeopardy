@@ -113,11 +113,14 @@ def question_to_html(question_text):
         question_text = "<tt>{}</tt>".format(question_text)
 
     # Parsing images
-    m = re.search(r'^\[img:([^\]]*)\]$', question_text)
+    #m = re.search(r'^\[img:([^\]]*)\]$', question_text)
+    m = re.search(r'^\[img:([^\]]*)\]\s?(.+)$', question_text)
+    print(m)
     if m:
+        
         # TODO file names will have to be hard to guess if we go multi-client
         # TODO push style into CSS
-        return '<img src="/static/game-media/{}" width="100%" style="max-height: 100%; max-width: 100%; object-fit: contain;">'.format(m.group(1))
+        return '<img src="/static/game-media/{}" width="100%" style="max-height: 100%; max-width: 100%; object-fit: contain;">'.format(m.group(1))+'<p>{}</p>'.format(m.group(2))
 
     # Transform new lines into <br>
     question_text = re.sub(r'\n', '<br/>', question_text)
