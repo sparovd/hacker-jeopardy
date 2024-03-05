@@ -264,11 +264,12 @@ def handle_slider(data):
 def move_to_final_round(data):
     controller = get_controller()
     if controller.is_final_question():
+        print("final_q!")        
         # TODO implement
-        pass
+        #pass
     else:
         # TODO better highlight winner
-        text = "<p>That's all folks! Thanks for playing!</p>"
+        text = "<p>Спасибо за игру!</p>"
         controller.set_state("overlay-question", text)
         controller.finish_game()
         emit("overlay", {"action": "show", "id": "question", "html": text},
