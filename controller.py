@@ -100,10 +100,14 @@ class Controller():
 
             gamefile, final = parse_gamefile(config['BASE_DIR'] + 'data/' + round_file)
             questions = parse_questions(config['BASE_DIR'] + q_file)
-
+            print(questions)
             # TODO do some validation based on config constants
             for _col, _cat in enumerate(gamefile, start=1):
+                print(_cat)
+                print(_col)
                 for _row, _q in enumerate(questions[_cat], start=1):
+                    print(_row)
+                    print(_q)
                     score = _row * config['SCORE_TICK']
                     question = Question(_q, score, _cat, _row, _col)
                     db.session.add(question)
